@@ -1,0 +1,44 @@
+package com.aziz.saturn.mixin.miscellaneous.threading_detector;
+
+import net.minecraft.util.ThreadingDetector;
+import net.minecraft.world.level.chunk.PalettedContainer;
+import org.spongepowered.asm.mixin.*;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+@Mixin(PalettedContainer.class)
+public class PalettedContainerMixin {
+    @Shadow @Final @Mutable
+    private ThreadingDetector threadingDetector;
+
+    @Inject(
+            method = {
+                    "<init>(Lnet/minecraft/core/IdMap;Ljava/lang/Object;Lnet/minecraft/world/level/chunk/PalettedContainer$Strategy;)V",
+                    "<init>(Lnet/minecraft/core/IdMap;Lnet/minecraft/world/level/chunk/PalettedContainer$Strategy;Lnet/minecraft/world/level/chunk/PalettedContainer$Data;)V",
+                    "<init>(Lnet/minecraft/core/IdMap;Lnet/minecraft/world/level/chunk/PalettedContainer$Strategy;Lnet/minecraft/world/level/chunk/PalettedContainer$Configuration;Lnet/minecraft/util/BitStorage;Ljava/util/List;)V"
+            },
+            at = @At(
+                    value = "TAIL"
+            )
+    )
+    private void init(CallbackInfo ci) {
+        this.threadingDetector = null;
+    }
+
+    /**
+     * @reason remove threading detector.
+     * @author AbdElAziz
+     * @since 0.0.8
+     * */
+    @Overwrite
+    public void acquire() {}
+
+    /**
+     * @reason remove threading detector.
+     * @author AbdElAziz
+     * @since 0.0.8
+     * */
+    @Overwrite
+    public void release() {}
+}
