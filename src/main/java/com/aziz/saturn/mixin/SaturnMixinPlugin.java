@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Set;
 
 public class SaturnMixinPlugin implements IMixinConfigPlugin {
-    public static final String MIXIN_PATH = "com.abdelaziz.saturn.mixin.";
+    public static final String MIXIN_PATH = "com.aziz.saturn.mixin.";
 
     @Override
     public void onLoad(String mixinPackage) {

@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "com.aziz.saturn.mixin",
-  "compatibilityLevel": "JAVA_17",
+  "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8.2",
   "refmap": "saturn.refmap.json",
   "plugin": "com.aziz.saturn.mixin.SaturnMixinPlugin",
@@ -9,10 +9,7 @@
     "defaultRequire": 1
   },
   "mixins": [
-    "allocations.empty_resource_location.AdvancementRewardsBuilderMixin",
-    "allocations.empty_resource_location.AdvancementRewardsMixin",
     "allocations.empty_vector.PigMixin",
-    "allocations.sheep_color_array.SheepMixin",
     "allocations.empty_vector.StriderMixin",
     "allocations.composter.ComposterBlockMixin$EmptyContainerMixin",
     "allocations.composter.ComposterBlockMixin$InputContainerMixin",
@@ -32,7 +29,6 @@
     "allocations.fall_sounds.MonsterMixin",
     "allocations.fall_sounds.PlayerMixin",
     "allocations.item_cooldowns.PlayerMixin",
-    "allocations.server_directory.MinecraftServerMixin",
     "gc_heap.unnecessary_object_creation.PointFreeMixin",
     "allocations.shulker_look_control.ShulkerLookControlMixin",
     "gc_heap.unnecessary_object_creation.TypeMixin",

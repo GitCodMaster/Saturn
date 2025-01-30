@@ -1,6 +1,6 @@
 package com.aziz.saturn.common.compat;
 
-import net.minecraftforge.fml.loading.FMLLoader;
+import net.neoforged.fml.loading.FMLLoader;
 
 public class ModCompat {
     public static final String MIXIN_PATH = "com.abdelaziz.saturn.mixin.";
