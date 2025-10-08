@@ -4,7 +4,7 @@
 
 ![Github License](https://img.shields.io/github/license/AbdElAziz333/Saturn)
 ![Github Issues](https://img.shields.io/github/issues/AbdElAziz333/Saturn)
-![Github Versions](https://img.shields.io/github/v/tag/AbdElAziz333/Saturn)
+![Github Versions](https://img.shields.io/github/v/tag/GitCodMaster/Saturn)
 
 This is a fork of the Saturn mod from AbdElAziz333, to update to newer minecraft versions. It doesnt bring any new features.
 
